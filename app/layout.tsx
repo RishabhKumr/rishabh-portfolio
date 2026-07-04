@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rishabh Kumar — Senior Software Engineer",
-  description: "Portfolio of Rishabh Kumar, Senior Software Engineer specializing in full-stack development, cloud architecture, and scalable systems.",
+  title: "Rishabh Kumar — Senior Application Development Engineer (IC3)",
+  description: "Portfolio of Rishabh Kumar, Senior Application Development Engineer(IC3) specializing in full-stack development, cloud architecture, and scalable systems.",
 };
 
 export default function RootLayout({

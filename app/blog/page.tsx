@@ -19,7 +19,12 @@ export default function BlogPage() {
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
-            <span className="text-violet-400 font-medium">Blog</span>
+            <Link href="/#about" className="hover:text-white transition-colors">
+              About
+            </Link>
+            <Link href="/blog" className="text-violet-400 font-medium">
+              All Posts
+            </Link>
           </div>
         </div>
       </nav>

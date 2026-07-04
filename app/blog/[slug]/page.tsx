@@ -105,13 +105,14 @@ export default async function BlogPostPage({ params }: { params: Params }) {
           </Link>
           <div className="hidden sm:flex items-center gap-6 text-sm text-zinc-400">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+            <Link href="/#about" className="hover:text-white transition-colors">About</Link>
+            <Link href="/blog" className="hover:text-white transition-colors">All Posts</Link>
           </div>
           <Link
             href="/#contact"
             className="text-sm font-medium px-4 py-2 rounded-full bg-gradient-to-r from-violet-600 to-cyan-600 hover:from-violet-500 hover:to-cyan-500 transition-all duration-200 shadow-lg shadow-violet-900/30"
           >
-            Hire Me
+            Connect Me
           </Link>
         </div>
       </nav>

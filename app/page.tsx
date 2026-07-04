@@ -6,7 +6,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#0d0d0d] text-white font-sans">
       {/* ─── NAV ──────────────────────────────────────────────────── */}
       <nav className="fixed top-0 inset-x-0 z-50 border-b border-white/5 backdrop-blur-xl bg-[#0d0d0d]/80">
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
           <span className="text-lg font-bold tracking-tight bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
             {/* RK */}
           </span>
@@ -39,7 +39,7 @@ export default function Home() {
         <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-violet-700/20 blur-[120px] pointer-events-none" />
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-cyan-700/20 blur-[120px] pointer-events-none" />
 
-        <div className="max-w-6xl mx-auto px-6 py-24 w-full grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-6xl mx-auto px-6 py-12 w-full grid lg:grid-cols-2 gap-16 items-center">
           <div className="flex flex-col gap-6">
             <span className="inline-flex items-center gap-2 text-sm font-medium text-violet-400 bg-violet-400/10 border border-violet-400/20 rounded-full px-4 py-1.5 w-fit">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
@@ -53,10 +53,10 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-xl text-zinc-300 font-semibold">
-              Senior Software Engineer
+              Senior Software Engineer | Full Stack | Distributed Systems
             </p>
             <p className="text-base text-zinc-400 max-w-lg leading-relaxed">
-              I architect and build high-performance, scalable full-stack applications. Passionate about clean code, developer experience, and turning complex problems into elegant solutions.
+              I build enterprise-scale backend services, secure web platforms, and AI-assisted diagnostics for high-availability products. My work spans Java, Spring, Python, cloud platforms, and modern observability at scale.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <a
@@ -76,8 +76,8 @@ export default function Home() {
             <div className="flex gap-8 pt-4 border-t border-white/5 mt-2">
               {[
                 { value: "6+", label: "Years Experience" },
-                { value: "40+", label: "Projects Shipped" },
-                { value: "15+", label: "Technologies" },
+                { value: "10+", label: "Enterprise Platforms" },
+                { value: "15+", label: "Core Technologies" },
               ].map(({ value, label }) => (
                 <div key={label}>
                   <p className="text-3xl font-bold bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
@@ -246,12 +246,6 @@ export default function Home() {
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <a
-                    href={project.github}
-                    className="text-xs font-medium text-zinc-400 hover:text-white transition-colors flex items-center gap-1"
-                  >
-                    ↗ GitHub
-                  </a>
                   {project.live && (
                     <a
                       href={project.live}
@@ -323,7 +317,7 @@ export default function Home() {
       {/* ─── FOOTER ───────────────────────────────────────────────── */}
       <footer className="border-t border-white/5 py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
-          <p>© 2026 Rishabh Kumar. Crafted with Next.js & Tailwind CSS.</p>
+          <p>© 2026 Rishabh Kumar</p>
           <p className="flex items-center gap-1">
             Designed & built by{" "}
             <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent font-medium ml-1">
@@ -350,184 +344,174 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 const offerings = [
   {
     icon: "🏗️",
-    title: "Full-Stack Architecture",
+    title: "Enterprise Platform Engineering",
     description:
-      "Design and build end-to-end systems — from database schema and API design to responsive UIs — with performance and maintainability baked in from day one.",
+      "Delivered high-availability feature enhancements for VIOM and other enterprise platforms (EMAP / VQA / AnalyseIQ), improving cluster management, storage provisioning, and failover reliability.",
   },
   {
-    icon: "⚡",
-    title: "Performance Optimization",
+    icon: "🔒",
+    title: "Security Hardening",
     description:
-      "Identify and resolve bottlenecks across the stack. I have cut load times by 60%+ and reduced infrastructure costs through caching, query tuning, and bundle optimization.",
+      "Remediated critical OWASP vulnerabilities and zero-day issues across web applications, strengthening product security and compliance.",
+  },
+  {
+    icon: "🧠",
+    title: "AI-Assisted Diagnostics",
+    description:
+      "Built intelligent troubleshooting flows for EMAP and Quick Assist using Java, Python, Elasticsearch, and RAG/LLM-based recommendations.",
   },
   {
     icon: "☁️",
     title: "Cloud & DevOps",
     description:
-      "Set up robust CI/CD pipelines, containerised deployments, and auto-scaling infrastructure on AWS so your product ships fast and stays up.",
+      "Worked across Docker, Kubernetes, Jenkins, AWS, and observability tooling to ship and support modern distributed systems.",
   },
   {
-    icon: "🔒",
-    title: "Secure, Scalable APIs",
+    icon: "⚙️",
+    title: "Backend & API Development",
     description:
-      "Build REST and GraphQL APIs following OWASP best practices — authentication, rate-limiting, input validation, and audit logging included.",
+      "Designed and implemented RESTful services with Spring Boot, Spring MVC, Hibernate, and Swagger-based documentation for scalable products.",
   },
   {
     icon: "🧪",
-    title: "Quality & Testing",
+    title: "Reliability & Quality",
     description:
-      "Deliver production-ready code with comprehensive unit, integration, and E2E test suites that catch regressions before they reach users.",
-  },
-  {
-    icon: "🤝",
-    title: "Team Leadership & Mentoring",
-    description:
-      "Lead technical planning, code reviews, and sprint cycles. I raise the bar for the whole team through mentoring, pair programming, and clear documentation.",
-  },
-  {
-    icon: "🎨",
-    title: "Pixel-Perfect UI",
-    description:
-      "Translate Figma designs into accessible, responsive interfaces with smooth interactions — no design debt left behind.",
-  },
-  {
-    icon: "🔄",
-    title: "Legacy Modernisation",
-    description:
-      "Incrementally migrate legacy codebases to modern stacks with zero downtime, keeping stakeholders informed at every step.",
-  },
-  {
-    icon: "📈",
-    title: "Product-Minded Engineering",
-    description:
-      "I think beyond tickets. I challenge requirements, suggest smarter approaches, and keep the end user in focus throughout the build.",
+      "Improved product quality with JUnit, Mockito, SonarQube, multithreading, and focused testing for enterprise-grade software.",
   },
 ];
 
 const hiringHighlights = [
-  { stat: "6+ years", label: "of professional full-stack engineering" },
-  { stat: "40+ projects", label: "shipped across startups and enterprises" },
-  { stat: "Zero missed", label: "production incidents due to code quality" },
-  { stat: "Sub-48h", label: "typical turnaround on critical bug fixes" },
-  { stat: "Open to", label: "full-time, contract, and fractional CTO roles" },
+  { stat: "6+ years", label: "building production software for enterprise platforms" },
+  { stat: "OWASP & zero-day", label: "security remediation across distributed systems" },
+  { stat: "Java / Spring / Python", label: "across backend, cloud, and product engineering" },
+  { stat: "EMAP & Quick Assist", label: "AI-driven diagnostics and automated support workflows" },
+  { stat: "Open to", label: "senior engineering roles and collaborative product work" },
 ];
 
 const skillCategories = [
   {
-    category: "Frontend",
-    icon: "🎨",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "Framer Motion"],
+    category: "Languages",
+    icon: "💻",
+    skills: ["Java", "Python", "JavaScript", "TypeScript", "SQL", "C/C++"],
   },
   {
-    category: "Backend",
+    category: "Frameworks",
     icon: "⚙️",
-    skills: ["Node.js", "Express", "NestJS", "GraphQL", "REST APIs", "WebSockets"],
+    skills: ["Spring Boot", "Spring MVC", "Spring Data JPA", "Hibernate", "FastAPI", "Angular"],
   },
   {
-    category: "Database & Cloud",
-    icon: "🗄️",
-    skills: ["PostgreSQL", "MongoDB", "Redis", "AWS", "Docker", "Kubernetes"],
+    category: "Cloud & DevOps",
+    icon: "☁️",
+    skills: ["Docker", "Kubernetes", "Jenkins", "AWS", "Maven", "Grafana"],
   },
   {
-    category: "Tools & Practices",
-    icon: "🛠️",
-    skills: ["Git", "CI/CD", "Jest", "Playwright", "Agile", "System Design"],
+    category: "Data & Security",
+    icon: "🛡️",
+    skills: ["Elasticsearch", "Redis", "SQL", "JUnit", "Mockito", "BurpSuite"],
   },
 ];
 
 const experiences = [
   {
-    role: "Senior Software Engineer",
-    company: "Tech Company",
-    period: "2022 – Present",
-    description:
-      "Lead engineer for a platform serving 500K+ users. Architected micro-frontend system reducing bundle size by 45%. Mentored a team of 4 engineers and drove quarterly OKRs.",
-    tech: ["React", "Node.js", "AWS", "Kubernetes", "PostgreSQL"],
+    role: "Senior Application Development Engineer (IC3)",
+    company: "Cloud Software Group (InfoScale)",
+    period: "Sept 2023 – Present",
+    description: (
+      <>
+        Delivered enterprise feature enhancements for VIOM 9.1 and 9.2, worked with TIM Security Group, HawkTrace, and CSG PenTest to address critical vulnerabilities in VIOM, provided cross-platform fixes, and built AI-assisted diagnostics for EMAP and Quick Assist.{' '}
+        <a
+          href="https://supportinfoscale.cloud.com/support-home/kbsearch/article?articleNumber=1000766080&articleTitle=InfoScale_Operations_Manager_IOM_web_application_Security_Bulletin_for_CVE_2026_44923_CVE_2026_44924_and_CVE_2026_44925"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-violet-400 underline underline-offset-2"
+        >
+          Refer
+        </a>
+        {' '}to the security bulletin.
+      </>
+    ),
+    tech: ["Java", "Spring", "Python", "Kubernetes", "AWS", "Elasticsearch"],
   },
   {
-    role: "Software Engineer II",
-    company: "Product Startup",
-    period: "2020 – 2022",
+    role: "Senior Software Engineer",
+    company: "Arctera (Aquired by Cloud Software Group)",
+    period: "Continued Service",
     description:
-      "Built real-time collaboration features used by 50K+ daily active users. Improved API response times by 60% through caching layers and query optimization.",
-    tech: ["Next.js", "TypeScript", "Redis", "GraphQL", "MongoDB"],
+      "Delivered enterprise feature enhancements for VIOM 9.1 and 9.2, remediated critical OWASP vulnerabilities, and built AI-assisted diagnostics for EMAP and Quick Assist.",
+    tech: ["Java", "Spring", "Python", "Kubernetes", "AWS", "Elasticsearch"],
+  },
+   {
+    role: "Software Engineer",
+    company: "Veritas Technologies (Aquired by Cohesity)",
+    period: "Sept 2023 - Continued Service",
+    description:
+      "Delivered enterprise feature enhancements for VIOM 9.1 and 9.2, remediated critical OWASP vulnerabilities, and built AI-assisted diagnostics for EMAP and Quick Assist.",
+    tech: ["Java", "Spring", "Python", "Kubernetes", "AWS", "Elasticsearch"],
+  },
+  {
+    role: "Programmer Analyst",
+    company: "Cognizant Technologies",
+    period: "Nov 2022 – Sept 2023",
+    description:
+      "Built RESTful APIs and a responsive Angular SPA for BBVA’s digital assets platform, deploying the solution on AWS with strong testing and code quality practices.",
+    tech: ["Spring Boot", "Hibernate", "Angular", "AWS", "JUnit"],
   },
   {
     role: "Software Engineer",
-    company: "Digital Agency",
-    period: "2019 – 2020",
+    company: "L&T Infotech",
+    period: "Jun 2020 – Nov 2022",
     description:
-      "Delivered 10+ client projects end-to-end, integrating third-party APIs and building responsive, accessible UIs from Figma designs.",
-    tech: ["React", "Express", "MySQL", "Docker", "REST APIs"],
+      "Contributed to Citi’s global trading P&L platform with Java-based microservices, Angular UI components, and high-coverage unit testing for higher reliability.",
+    tech: ["Java", "Spring", "Angular", "JUnit", "SonarQube"],
   },
 ];
 
 const projects = [
   {
-    emoji: "🚀",
-    title: "CloudDash",
+    emoji: "🧱",
+    title: "VIOM Platform Enhancements",
     status: "Production",
     description:
-      "A real-time cloud infrastructure monitoring dashboard with alerting, cost analytics, and multi-cloud support.",
-    tech: ["Next.js", "Node.js", "WebSockets", "AWS", "D3.js"],
+      "Improved high availability, cluster management, storage provisioning, and failover workflows for enterprise storage operations.",
+    tech: ["Java", "Spring", "Python", "Kubernetes", "Linux"],
     github: "#",
-    live: "#",
-  },
-  {
-    emoji: "🤝",
-    title: "CollabFlow",
-    status: "Production",
-    description:
-      "Real-time collaborative document editor with presence indicators, version history, and role-based access control.",
-    tech: ["React", "Yjs", "WebRTC", "PostgreSQL", "Redis"],
-    github: "#",
-    live: "#",
+    live: null,
   },
   {
     emoji: "🧠",
-    title: "AI Code Review",
-    status: "Beta",
+    title: "EMAP & Quick Assist Diagnostics",
+    status: "Production",
     description:
-      "GitHub App that performs automated code reviews using LLMs — detects bugs, security issues, and suggests improvements.",
-    tech: ["TypeScript", "OpenAI API", "GitHub API", "Prisma"],
+      "Built AI-assisted troubleshooting and evidence-processing services with log analysis, health reports, and RAG-based recommendations.",
+    tech: ["Java", "Python", "Elasticsearch", "RAG", "LLM"],
     github: "#",
     live: null,
   },
   {
-    emoji: "📦",
-    title: "DeployKit CLI",
+    emoji: "💳",
+    title: "BBVA Digital Assets SPA",
     status: "Production",
     description:
-      "Zero-config CLI tool to scaffold, build, and deploy full-stack projects to AWS with a single command.",
-    tech: ["Node.js", "AWS CDK", "Terraform", "Docker", "Shell"],
+      "Developed REST APIs and a responsive Angular experience for a financial digital assets product deployed on AWS.",
+    tech: ["Spring Boot", "Angular", "Swagger", "AWS", "Postman"],
     github: "#",
     live: null,
   },
   {
-    emoji: "🛒",
-    title: "SwiftCommerce",
+    emoji: "📈",
+    title: "GTPL Trading & P&L Platform",
     status: "Production",
     description:
-      "High-performance headless e-commerce platform with SSR, edge caching, and seamless Stripe & inventory integrations.",
-    tech: ["Next.js", "Stripe", "Postgres", "Elasticsearch", "Redis"],
-    github: "#",
-    live: "#",
-  },
-  {
-    emoji: "📊",
-    title: "DataPulse",
-    status: "Beta",
-    description:
-      "Self-hosted analytics platform — drop-in replacement for Google Analytics with full data ownership and custom dashboards.",
-    tech: ["React", "ClickHouse", "Kafka", "Go", "Grafana"],
+      "Contributed to Java microservices and Angular UI work for a global trading profit & loss application with strong quality controls.",
+    tech: ["Java", "Spring", "Angular", "JUnit", "JaCoCo"],
     github: "#",
     live: null,
   },
 ];
 
 const contactLinks = [
-  { label: "Email", value: "rishabh@example.com", href: "mailto:rishabh@example.com", icon: "📧" },
-  { label: "GitHub", value: "github.com/rishabh-kumar", href: "https://github.com", icon: "🐙" },
-  { label: "LinkedIn", value: "linkedin.com/in/rishabh-kumar", href: "https://linkedin.com", icon: "💼" },
-  { label: "Twitter / X", value: "@rishabh_dev", href: "https://twitter.com", icon: "🐦" },
+  { label: "Email", value: "RishabhKumr@outlook.com", href: "mailto:RishabhKumr@outlook.com", icon: "📧" },
+  { label: "Phone", value: "+91-8077619658", href: "tel:+918077619658", icon: "📞" },
+  { label: "GitHub", value: "github.com/RishabhKumr", href: "https://github.com/RishabhKumr", icon: "🐙" },
+  { label: "LinkedIn", value: "linkedin.com/in/devrishabhkumar", href: "https://www.linkedin.com/in/devrishabhkumar/", icon: "💼" },
 ];
