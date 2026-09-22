@@ -76,8 +76,8 @@ export default function Home() {
             <div className="flex gap-8 pt-4 border-t border-white/5 mt-2">
               {[
                 { value: "6+", label: "Years Experience" },
-                { value: "10+", label: "Enterprise Platforms" },
-                { value: "15+", label: "Core Technologies" },
+                { value: "5+", label: "Enterprise Platforms" },
+                { value: "10+", label: "Core Technologies" },
               ].map(({ value, label }) => (
                 <div key={label}>
                   <p className="text-3xl font-bold bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
@@ -122,6 +122,20 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mb-16 relative rounded-2xl border border-red-500/20 bg-gradient-to-br from-red-900/15 via-violet-900/10 to-cyan-900/10 p-8 overflow-hidden">
+            <div className="absolute -top-10 -right-10 w-48 h-48 rounded-full bg-red-600/15 blur-3xl" />
+            <div className="relative">
+              <span className="inline-flex items-center gap-2 text-sm font-medium text-red-300 bg-red-500/10 border border-red-500/20 rounded-full px-4 py-1.5 mb-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-red-400" />
+                Mythos Security Fixes
+              </span>
+              <h3 className="text-2xl font-bold mb-3">Critical application hardening across multiple attack classes</h3>
+              <p className="text-zinc-300 leading-relaxed max-w-3xl">
+                I worked on the Mythos security remediation effort to fix critical-level issues across web application surfaces, including XSS, SQL injection, shell injection, command injection, SSRF, and related high-risk vulnerabilities. The work focused on strengthening input validation, sanitization, request handling, and unsafe execution paths to reduce exposure and improve product security posture.
+              </p>
+            </div>
           </div>
 
           {/* Value proposition banner */}
@@ -382,7 +396,7 @@ const offerings = [
 
 const hiringHighlights = [
   { stat: "6+ years", label: "building production software for enterprise platforms" },
-  { stat: "OWASP & zero-day", label: "security remediation across distributed systems" },
+  { stat: "Mythos security fixes", label: "critical XSS, SQLi, shell/command injection, and SSRF remediation" },
   { stat: "Java / Spring / Python", label: "across backend, cloud, and product engineering" },
   { stat: "EMAP & Quick Assist", label: "AI-driven diagnostics and automated support workflows" },
   { stat: "Open to", label: "senior engineering roles and collaborative product work" },
