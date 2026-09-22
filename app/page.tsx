@@ -133,7 +133,15 @@ export default function Home() {
               </span>
               <h3 className="text-2xl font-bold mb-3">Critical application hardening across multiple attack classes</h3>
               <p className="text-zinc-300 leading-relaxed max-w-3xl">
-                I worked on the Mythos security remediation effort to fix critical-level issues across web application surfaces, including XSS, SQL injection, shell injection, command injection, SSRF, and related high-risk vulnerabilities. The work focused on strengthening input validation, sanitization, request handling, and unsafe execution paths to reduce exposure and improve product security posture.
+                I worked on the Mythos security remediation effort to fix critical-level issues across web application surfaces, including XSS, SQL injection, shell injection, command injection, SSRF, and related high-risk vulnerabilities. The work focused on strengthening input validation, sanitization, request handling, and unsafe execution paths to reduce exposure and improve product security posture.{' '}
+                <a
+                  href="https://supportinfoscale.cloud.com/support-home/kbsearch/article?articleNumber=1000766080"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-red-300 underline underline-offset-2 hover:text-red-200"
+                >
+                  This was addressed here.
+                </a>
               </p>
             </div>
           </div>
