@@ -532,7 +532,7 @@ const projects = [
 ];
 
 const contactLinks = [
-  { label: "Email", value: "RishabhKumr@outlook.com", href: "mailto:RishabhKumr@outlook.com", icon: "📧" },
+  { label: "Email", value: "Rishabh.Kumr@outlook.com", href: "mailto:RishabhKumr@outlook.com", icon: "📧" },
   { label: "Phone", value: "+91-8077619658", href: "tel:+918077619658", icon: "📞" },
   { label: "GitHub", value: "github.com/RishabhKumr", href: "https://github.com/RishabhKumr", icon: "🐙" },
   { label: "LinkedIn", value: "linkedin.com/in/devrishabhkumar", href: "https://www.linkedin.com/in/devrishabhkumar/", icon: "💼" },
