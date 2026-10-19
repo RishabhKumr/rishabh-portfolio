@@ -28,6 +28,18 @@ export default function BlogPage() {
             <Link href="/blog" className="text-violet-400 font-medium">
               All Posts
             </Link>
+            <a
+              href="/resume/Rishabh_Kumar_Resume_CloudSoftwareGroup.pdf"
+              download="Rishabh_Kumar_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30 hover:bg-white/5 transition-all text-zinc-300 hover:text-white"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span>Resume</span>
+            </a>
           </div>
         </div>
       </nav>
@@ -92,9 +104,21 @@ export default function BlogPage() {
       <footer className="border-t border-white/5 py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
           <p>© 2026 Rishabh Kumar.</p>
-          <Link href="/" className="hover:text-zinc-300 transition-colors">
-            ← Back to portfolio
-          </Link>
+          <div className="flex items-center gap-6">
+            <a
+              href="/resume/Rishabh_Kumar_Resume_CloudSoftwareGroup.pdf"
+              download="Rishabh_Kumar_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-zinc-300 transition-colors flex items-center gap-1.5"
+            >
+              <span>Download Resume</span>
+              <span>↓</span>
+            </a>
+            <Link href="/" className="hover:text-zinc-300 transition-colors">
+              ← Back to portfolio
+            </Link>
+          </div>
         </div>
       </footer>
     </div>

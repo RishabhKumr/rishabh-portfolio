@@ -26,12 +26,26 @@ export default function Home() {
               Blog
             </Link>
           </div>
-          <a
-            href="#contact"
-            className="text-sm font-medium px-4 py-2 rounded-full bg-gradient-to-r from-violet-600 to-cyan-600 hover:from-violet-500 hover:to-cyan-500 transition-all duration-200 shadow-lg shadow-violet-900/30"
-          >
-            Let’s build.
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href="/resume/Rishabh_Kumar_Resume_CloudSoftwareGroup.pdf"
+              download="Rishabh_Kumar_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-medium px-3.5 py-2 rounded-full border border-white/10 hover:border-white/30 hover:bg-white/5 transition-all text-zinc-300 hover:text-white"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span>Resume</span>
+            </a>
+            <a
+              href="#contact"
+              className="text-sm font-medium px-4 py-2 rounded-full bg-gradient-to-r from-violet-600 to-cyan-600 hover:from-violet-500 hover:to-cyan-500 transition-all duration-200 shadow-lg shadow-violet-900/30"
+            >
+              Let’s build.
+            </a>
+          </div>
         </div>
       </nav>
 
@@ -62,8 +76,20 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <a
+                href="/resume/Rishabh_Kumar_Resume_CloudSoftwareGroup.pdf"
+                download="Rishabh_Kumar_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-violet-600 to-cyan-600 hover:from-violet-500 hover:to-cyan-500 font-semibold text-sm transition-all duration-200 shadow-xl shadow-violet-900/40 flex items-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>Download Resume</span>
+              </a>
+              <a
                 href="#appsec"
-                className="px-6 py-3 rounded-full bg-gradient-to-r from-red-600 via-violet-600 to-cyan-600 hover:from-red-500 hover:to-cyan-500 font-semibold text-sm transition-all duration-200 shadow-xl shadow-red-900/30"
+                className="px-6 py-3 rounded-full border border-red-500/30 bg-red-500/10 hover:bg-red-500/20 text-red-300 font-semibold text-sm transition-all duration-200"
               >
                 AppSec & CVE Fixes
               </a>
@@ -545,21 +571,27 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact links */}
             <div className="flex flex-col gap-4">
-              {contactLinks.map(({ label, value, href, icon }) => (
+              {contactLinks.map(({ label, value, href, icon, download }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  {...(download ? { download } : {})}
                   className="group flex items-center gap-4 p-4 rounded-2xl border border-white/8 bg-white/3 hover:border-violet-500/40 hover:bg-white/5 transition-all duration-300"
                 >
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600/30 to-cyan-600/30 flex items-center justify-center text-lg border border-white/10">
                     {icon}
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <p className="text-xs text-zinc-500">{label}</p>
                     <p className="text-sm font-medium text-zinc-200 group-hover:text-white transition-colors">{value}</p>
                   </div>
+                  {download && (
+                    <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-300 group-hover:bg-violet-500/20 transition-colors flex items-center gap-1">
+                      <span>↓</span> Download
+                    </span>
+                  )}
                 </a>
               ))}
             </div>
@@ -576,12 +608,26 @@ export default function Home() {
               <p className="text-zinc-400 text-sm max-w-xs">
                 Open to full-time positions and exciting collaborative projects worldwide.
               </p>
-              <a
-                href="mailto:rishabh@example.com"
-                className="mt-2 px-6 py-3 rounded-full bg-gradient-to-r from-violet-600 to-cyan-600 hover:from-violet-500 hover:to-cyan-500 font-semibold text-sm transition-all duration-200 shadow-xl shadow-violet-900/40"
-              >
-                Send a Message
-              </a>
+              <div className="flex flex-wrap gap-3 mt-2 justify-center">
+                <a
+                  href="mailto:Rishabh.Kumr@outlook.com"
+                  className="px-6 py-3 rounded-full bg-gradient-to-r from-violet-600 to-cyan-600 hover:from-violet-500 hover:to-cyan-500 font-semibold text-sm transition-all duration-200 shadow-xl shadow-violet-900/40"
+                >
+                  Send a Message
+                </a>
+                <a
+                  href="/resume/Rishabh_Kumar_Resume_CloudSoftwareGroup.pdf"
+                  download="Rishabh_Kumar_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-3 rounded-full border border-white/10 hover:border-white/30 hover:bg-white/5 font-semibold text-sm transition-all duration-200 flex items-center gap-2 text-zinc-300 hover:text-white"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  <span>Download Resume</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -591,12 +637,26 @@ export default function Home() {
       <footer className="border-t border-white/5 py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
           <p>© 2026 Rishabh Kumar</p>
-          <p className="flex items-center gap-1">
-            Designed & built by{" "}
-            <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent font-medium ml-1">
-              Rishabh Kumar
-            </span>
-          </p>
+          <div className="flex items-center gap-6">
+            <a
+              href="/resume/Rishabh_Kumar_Resume_CloudSoftwareGroup.pdf"
+              download="Rishabh_Kumar_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-zinc-300 transition-colors flex items-center gap-1.5"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span>Download Resume</span>
+            </a>
+            <p className="flex items-center gap-1">
+              Designed & built by{" "}
+              <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent font-medium ml-1">
+                Rishabh Kumar
+              </span>
+            </p>
+          </div>
         </div>
       </footer>
     </div>
@@ -866,4 +926,11 @@ const contactLinks = [
   { label: "Phone", value: "+91-8077619658", href: "tel:+918077619658", icon: "📞" },
   { label: "GitHub", value: "github.com/RishabhKumr", href: "https://github.com/RishabhKumr", icon: "🐙" },
   { label: "LinkedIn", value: "linkedin.com/in/devrishabhkumar", href: "https://www.linkedin.com/in/devrishabhkumar/", icon: "💼" },
+  {
+    label: "Resume",
+    value: "Rishabh_Kumar_Resume.pdf",
+    href: "/resume/Rishabh_Kumar_Resume_CloudSoftwareGroup.pdf",
+    icon: "📄",
+    download: "Rishabh_Kumar_Resume.pdf",
+  },
 ];
