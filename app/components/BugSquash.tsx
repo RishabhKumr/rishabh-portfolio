@@ -122,7 +122,7 @@ export default function BugSquash() {
           </div>
         )}
       </div>
-      <p className="text-xs text-zinc-600 font-mono">// a little fun while you browse</p>
+      <p className="text-xs text-zinc-600 font-mono">{"// a little fun while you browse"}</p>
     </div>
   );
 }

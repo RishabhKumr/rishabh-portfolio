@@ -22,6 +22,9 @@ export default function BlogPage() {
             <Link href="/#about" className="hover:text-white transition-colors">
               About
             </Link>
+            <Link href="/#appsec" className="hover:text-white transition-colors">
+              AppSec
+            </Link>
             <Link href="/blog" className="text-violet-400 font-medium">
               All Posts
             </Link>
@@ -31,7 +34,7 @@ export default function BlogPage() {
 
       {/* HERO */}
       <section className="max-w-6xl mx-auto px-6 pt-20 pb-12">
-        <p className="text-sm font-mono text-violet-400 mb-3">// writings</p>
+        <p className="text-sm font-mono text-violet-400 mb-3">{"// writings"}</p>
         <h1 className="text-4xl sm:text-5xl font-bold mb-4">Security Blog</h1>
         <p className="text-zinc-400 text-lg max-w-2xl">
           Deep dives into web security vulnerabilities — how they work, how they&apos;re exploited,
